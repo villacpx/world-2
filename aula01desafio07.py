@@ -1,14 +1,16 @@
-from datetime import date
-ano = int(input('Digite o ano de nascimento: '))
-atual = date.today().year
-n1 = atual-ano
-if 0 < n1 <= 9:
-    print('CATEGORIA MIRIM')
-elif 9 < n1 <= 14:
-    print('CATEGORIA INFANTIL')
-elif 14 < n1 < 19:
-    print('CATEGORIA JUNIOR')
-elif 19 <= n1 <= 20:
-    print('CATEGORIA SENIOR')
-elif 20 < n1:
-    print('CATEGORIA MASTER')
+import random
+a = random.randint(1, 10)
+b = random.randint(1, 10)
+c = random.randint(1, 10)
+print(a, b, c)
+if a < b + c and b < a + c and c < a + b:
+    print('essas medidas conseguem formar um triângulo!')
+    if a == b and b == c and c == a:
+        print('Esse triângulo é um equilátero')
+    elif a == b or b == c or c == a:
+        print('Esse triângulo é um isósceles')
+    else:
+        print('Esse triângulo é um escaleno')
+
+else:
+    print('Essas medidas não formam um triângulo!')

@@ -1,16 +1,13 @@
-import random
-a = random.randint(1, 10)
-b = random.randint(1, 10)
-c = random.randint(1, 10)
-print(a, b, c)
-if a < b + c and b < a + c and c < a + b:
-    print('essas medidas conseguem formar um triângulo!')
-    if a == b and b == c and c == a:
-        print('Esse triângulo é um equilátero')
-    elif a == b or b == c or c == a:
-        print('Esse triângulo é um isósceles')
-    else:
-        print('Esse triângulo é um escaleno')
-
-else:
-    print('Essas medidas não formam um triângulo!')
+peso = float(input('Digite seu peso, ex 69.84: '))
+altura = float(input('Digite sua altura, ex 1.70: '))
+imc = peso / (altura*altura)
+if imc < 18.5:
+    print('ABAIXO DO PESO')
+elif 18.5 <= imc <= 25:
+    print('PESO IDEAL')
+elif 25 < imc <= 30:
+    print('SOBREPESO')
+elif 30 < imc <= 40:
+    print('OBESIDADE')
+elif 40 < imc:
+    print('OBESIDADE MÓRBIDA')

@@ -1,9 +1,14 @@
-nota1 = float(input('Digite a nota do primeiro trimestre: '))
-nota2 = float(input('Digite agora a nota do segundo trimestre: '))
-media = (nota1+nota2)/2
-if media > 7.0:
-    print('APROVADO')
-elif 5 < media < 6.9:
-    print('RECUPERAÇÃO')
-elif media < 5.0:
-    print('REPROVADO')
+from datetime import date
+ano = int(input('Digite o ano de nascimento: '))
+atual = date.today().year
+n1 = atual-ano
+if 0 < n1 <= 9:
+    print('CATEGORIA MIRIM')
+elif 9 < n1 <= 14:
+    print('CATEGORIA INFANTIL')
+elif 14 < n1 < 19:
+    print('CATEGORIA JUNIOR')
+elif 19 <= n1 <= 20:
+    print('CATEGORIA SENIOR')
+elif 20 < n1:
+    print('CATEGORIA MASTER')
